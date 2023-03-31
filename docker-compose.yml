@@ -1,0 +1,30 @@
+version: '2'
+
+services:
+
+  mysql:
+    image: docker.io/bitnami/mysql:8.0
+    ports:
+        - '33306:3306'
+    environment:
+      # ALLOW_EMPTY_PASSWORD is recommended only for development.
+      - ALLOW_EMPTY_PASSWORD=yes
+      - MYSQL_USER=app
+      - MYSQL_DATABASE=app
+      - MYSQL_PASSWORD=app
+      - MYSQL_AUTHENTICATION_PLUGIN=mysql_native_password
+
+  app:
+    build: ./docker
+    ports:
+      - '8000:8000'
+    environment:
+      - DB_HOST=mysql
+      - DB_PORT=3306
+      - DB_USERNAME=app
+      - DB_DATABASE=app
+      - DB_PASSWORD=app
+    volumes:
+      - './:/app'
+    depends_on:
+      - mysql

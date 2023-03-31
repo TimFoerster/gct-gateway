@@ -1,0 +1,10 @@
+{
+    "/js/app.js": "/js/app.js",
+    "/js/datatable.js": "/js/datatable.js",
+    "/js/chart.js": "/js/chart.js",
+    "/js/echarts.js": "/js/echarts.js",
+    "/js/radar.js": "/js/radar.js",
+    "/js/series.js": "/js/series.js",
+    "/css/datatable.css": "/css/datatable.css",
+    "/css/app.css": "/css/app.css"
+}

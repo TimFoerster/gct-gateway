@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply bg-gray-100 dark:bg-gray-900;
+    @apply text-gray-900 dark:text-gray-400;
+}
+
+.bg-default {
+    @apply bg-white dark:bg-gray-800;
+    @apply text-gray-800 dark:text-gray-500;
+}
+
+thead {
+    @apply font-bold;
+}
+
+tr:nth-child(even) {
+    @apply bg-gray-100 dark:bg-gray-700;
+    @apply text-gray-900 dark:text-gray-400;
+}
+
+h3 {
+    @apply font-bold;
+}
+
+.panel {
+    @apply flex flex-col px-2 bg-default overflow-hidden shadow sm:rounded-lg;
+}
+
+.bt-default {
+    @apply hover:bg-gray-500 text-white py-1 px-2 rounded transition-all;
+    @apply bg-blue-100 text-gray-700 hover:bg-blue-300;
+    @apply dark:bg-blue-900 dark:text-gray-300 dark:hover:bg-blue-800;
+}
+
+.bt-active {
+    @apply bg-blue-400;
+    @apply dark:bg-blue-600
+}
+
+.bt-danger {
+    @apply text-red-600;
+}
+
+
+
+
+
+
